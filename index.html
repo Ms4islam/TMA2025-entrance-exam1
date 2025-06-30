@@ -135,7 +135,7 @@
             <div class="text-center">
                 <select id="tableSelector" class="form-control" style="max-width: 300px; margin: 0 auto;">
                     <option value="">Select Session</option>
-                    <option value="table1">2023/24 Session</option>
+                    <option value="table1">2025/26 Session</option>
                     <option value="table2" selected>2024/25 Session</option>
                 </select>
             </div>
@@ -151,7 +151,7 @@
                             <th>Maths (50):</th>
                             <th>English Language (50):</th>
                             <th>General Knowledge (60):</th>
-                            <th>Total (160):</th>
+                            <th>Total (170):</th>
                             <th>Status:</th>
                         </tr>
                     </thead>
@@ -164,7 +164,191 @@
     </div>
 
     <footer class="footer">
-        <p> <i class="material-icons footer-icon">language</i>2023 TINKER MONTESSORI ACADEMY, All rights reserved. |<i
+        <p> <i class="material-icons footer-icon">language</i>2025 TINKER MONTESSORI ACADEMY, All rights reserved. |<i
+                class="material-icons footer-icon">location_on</i>Lere Street, U/Dosa, Kaduna, Nigeria. |<i
+                class="material-icons footer-icon">phone</i>0803 368 3857</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedheader/3.3.2/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                responsive: true
+            });
+
+            new $.fn.dataTable.FixedHeader(table);
+
+            var tableData = {
+                <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.3.2/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/TMA_CircledLogo_NoBG.png" type="image/x-icon">
+    <title>TMA CE-Exams</title>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.5;
+            padding-bottom: 10%;
+        }
+
+        .navbar-default {
+            background-color: #333;
+            border-color: #222;
+            height: 80px;
+            border-radius: 0%;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            padding-top: 15px;
+            height: 100%;
+        }
+
+        .tab_h {
+            background-color: #8a1e16;
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar-default .navbar-brand span {
+            color: #ffcc00;
+        }
+
+        .navbar-default .navbar-brand strong {
+            color: #fff;
+        }
+
+        .navbar-default .navbar-brand img {
+            display: inline-block;
+            margin-right: 10px;
+            height: 53px;
+            width: 65px;
+            vertical-align: middle;
+        }
+
+        .footer {
+            background-color: #333;
+            border-color: #222;
+            height: 8%;
+            border-radius: 0%;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .footer-icon {
+            margin-right: 2px;
+            font-size: 18px;
+            vertical-align: middle;
+        }
+
+        .footer-text {
+            display: flex;
+            align-items: center;
+            font-size: 10px;
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #5a5c41;
+        }
+
+        .pass {
+            color: rgb(21, 179, 68);
+        }
+
+        .fail {
+            color: #cf0e00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="images/TMA_CircledLogo_NoBG.png" alt="Logo">
+                    <span><strong>Tinker <span>Montessori</span> Academy</strong></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <pre>
+
+
+    </pre>
+    <h2 class="text-center" style="font-size: 22px; font-weight: bold; color: #333;">Common Entrance Exam Results.</h2>
+    <p class="lead text-center" style="font-size: 15px; color: #666;">Below are the results of the common entrance exam
+        conducted for admission. Click the + to expand (mobile view).</p>
+
+    <p class="lead text-center" style="font-size: 15px; color: #000;">
+        <strong>PASSMARK: <span id="passMarkValue">80</span></strong>
+    </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <select id="tableSelector" class="form-control" style="max-width: 300px; margin: 0 auto;">
+                    <option value="">Select Session</option>
+                    <option value="table1">2025/26 Session</option>
+                    <option value="table2" selected>2024/25 Session</option>
+                </select>
+            </div>
+            <div class="table-responsive" style="text-align: center; margin-top: 20px;">
+                <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+                    <thead class="tab_h">
+                        <tr>
+                            <th>S.No.:</th>
+                            <th>Surname:</th>
+                            <th>Other Name(s):</th>
+                            <th>Class:</th>
+                            <th>Age:</th>
+                            <th>Maths (50):</th>
+                            <th>English Language (50):</th>
+                            <th>General Knowledge (60):</th>
+                            <th>Total (170):</th>
+                            <th>Status:</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Table data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p> <i class="material-icons footer-icon">language</i>2025 TINKER MONTESSORI ACADEMY, All rights reserved. |<i
                 class="material-icons footer-icon">location_on</i>Lere Street, U/Dosa, Kaduna, Nigeria. |<i
                 class="material-icons footer-icon">phone</i>0803 368 3857</p>
     </footer>
@@ -185,82 +369,120 @@
 
             var tableData = {
                 table1: [
-                    ["1", "Umar ", "Muhammad Modibo", "JSS 1", "20", "49", "36",  "PASSED"],
-                    ["2", "Khadija", "Zayyad Adam", "JSS 1", "15", "33", "31",  "PASSED"],
-                    ["3", "Maryam", "Aliyu Dodo", "JSS 1", "13", "41", "35",  "PASSED"],
-                    ["4", "Ridwan", "Mustapha Sali", "JSS 1", "29", "40", "45",  "PASSED"],
-                    ["5", "Hauwa ", "Abdullahi Aliyu", "JSS 1", "21", "46", "40",  "PASSED"],
-                    ["6", "Zinatu", " Muhammad Sani", "JSS 2", "16", "34", "18",  "PASSED"],
-                    ["7", "Abdurrahman ", "Mamman Isah", "JSS 1", "22", "51", "41", "PASSED"],
-                    ["8", "UmmulAiman", "Muhammad Diko", "JSS 1", "31", "43", "37", "PASSED"],
-                    ["9", "Hussain", "Shamsudeen", "JSS 1", "23", "36", "25", "PASSED"],
-                    ["10", "Hafsat", "Abubakar Yakubu", "JSS 1", "31", "49", "46", "PASSED"],
-                    ["11", "Aliyu", "Muhammad Aliyu", "JSS 1", "15", "36", "23",  "PASSED"],
-                    ["12", "Raihana", "Muhammad Nuruddeen", "JSS 1", "30", "44", "40",  "PASSED"],
-                    ["13", "Sani", "Aminu Yusuf", "JSS 1", "06", "41", "16",  "FAILED"],
-                    ["14", "Nafisa", "Murtala", "JSS 1", "18", "40", "43",  "passed"],
-                    ["15", "Mustapha", "Tahir saeed", "JSS 1", "12", "37", "25",  "PASSED"],
-                    ["16", "Aisha", "Aliyu", "JSS 1", "28", "39", "45",  "PASSED"],
-                    ["17", "Muhammad", " Al-amin Abdul Isah", "JSS 1", "19", "39", "39",  "PASSED"],
-                    ["18", "Hauwa", "Usman Sali", "JSS 1", "25", "41", "37",  "PASSED"],
-                    ["19", "Rukayya", "Sani", "JSS 1", "21", "40", "28",  "PASSED"],
-                    ["20", "Aisha", "Aliyu", "JSS 1", "28", "39", "45",  "FAILED"],
-                    ["21", "Ibrahim", "Abdulkadir", "JSS 1", "23", "34", "32",  "PASSED"],
-                    ["22", "Fadila", "Abdullahi", "JSS 1", "12", "35", "22",  "FAILED"],
-                    ["23", "Abubakar", "Muhammad", "JSS 1", "16", "20", "14",  "FAILED"],
-                    ["24", "Hassan", "Shamsudeen", "JSS 1", "16", "36", "21",  "FAILED"]
+                    ["1", "Umar ", "Muhammad Modibo", "JSS 1", "", "20", "49", "36", "PASSED"],
+                    ["2", "Khadija", "Zayyad Adam", "JSS 1", "", "15", "33", "32", "PASSED"],
+                    ["3", "Maryam", "Aliyu Dodo", "JSS 1", "", "13", "41", "35", "PASSED"],
+                    ["4", "Ridwan", "Mustapha Sali", "JSS 1", "", "29", "40", "45", "PASSED"],
+                    ["5", "Hauwa ", "Abdullahi Aliyu", "JSS 1", "", "21", "46", "40", "PASSED"],
+                    ["6", "Zinatu", " Muhammad Sani", "JSS 2", "", "16", "34", "18", "PASSED"],
+                    ["7", "Abdurrahman ", "Mamman Isah", "JSS 1", "", "22", "51", "41", "PASSED"],
+                    ["8", "UmmulAiman", "Muhammad Diko", "JSS 1", "", "31", "43", "37", "PASSED"],
+                    ["9", "Hussain", "Shamsudeen", "JSS 1", "", "23", "36", "25", "PASSED"],
+                    ["10", "Hafsat", "Abubakar Yakubu", "JSS 1", "", "31", "49", "46", "PASSED"],
+                    ["11", "Aliyu", "Muhammad Aliyu", "JSS 1", "", "15", "36", "23", "PASSED"],
+                    ["12", "Raihana", "Muhammad Nuruddeen", "JSS 1", "", "30", "44", "40", "PASSED"],
+                    ["13", "Sani", "Aminu Yusuf", "JSS 1", "", "06", "41", "16", "FAILED"],
+                    ["14", "Nafisa", "Murtala", "JSS 1", "", "18", "40", "43", "PASSED"],
+                    ["15", "Mustapha", "Tahir Saeed", "JSS 1", "", "12", "37", "25", "PASSED"],
+                    ["16", "Aisha", "Aliyu", "JSS 1", "", "28", "39", "45", "PASSED"],
+                    ["17", "Muhammad", " Al-amin Abdul Isah", "JSS 1", "", "19", "39", "39", "PASSED"],
+                    ["18", "Hauwa", "Usman Sali", "JSS 1", "", "25", "41", "37", "PASSED"],
+                    ["19", "Rukayya", "Sani", "JSS 1", "", "21", "40", "28", "PASSED"],
+                    ["20", "Aisha", "Aliyu", "JSS 1", "", "28", "39", "45", "FAILED"],
+                    ["21", "Ibrahim", "Abdulkadir", "JSS 1", "", "23", "34", "32", "PASSED"],
+                    ["22", "Fadila", "Abdullahi", "JSS 1", "", "12", "35", "22", "FAILED"],
+                    ["23", "Abubakar", "Muhammad", "JSS 1", "", "16", "20", "14", "FAILED"],
+                    ["24", "Hassan", "Shamsudeen", "JSS 1", "", "16", "36", "21", "FAILED"]
                 ],
                 table2: [
-                    ["1", "Aisha", " Muhammad Muktar", "JSS 1", "22", "44", "49",  "0", "PASSED"],
-                    ["2", "Zainab", "Rilwan", "JSS 1",  "15", "21", "25", "0", "FAILED"],
-                    ["3", "Amina", "Abdulkadir", "JSS 1",  "11", "38", "28", "0", "PASSED"],
-                    ["4", "Idris", "Ibrahim Idris", "JSS 1", "22", "35", "18",  "0", "PASSED"],
-                    ["5", "Saudat", "Imaran Kolo", "JSS 1", "17", "41", "37",  "0", "PASSED"],
-                    ["6", "Ahmad", "Abdullahi Saleh", "JSS 1", "25", "45", "43",  "0", "PASSED"],
-                    ["7", "Zainab", "Muhammad Mustapha", "JSS 1", "12", "37", "32", "0", "PASSED"],
-                    ["8", "Muhammad", "Usman", "JSS 1", "23", "38", "34", "0", "PASSED"],
-                    ["9", "Ummulkulthum", "Suleiman", "JSS 1", "17", "30", "24",  "0", "PASSED"],
-                    ["10", "Muhammad", "Zakari Umar", "JSS 1", "17", "33", "40",  "0", "PASSED"],
-                    ["11", "Mohammed", "Zarah Umar", "SS 2", "18", "47", "26",  "0", "PASSED"], // Year of birth missing, age not calculated
-                    ["12", "Zainab", "M. Yunus", "SS 2", "14", "39", "22",  "0", "PASSED"],
-                    ["13", "Rukayya", "Aminu", "SS 2", "37", "42", "46",  "0", "PASSED"],
-                    ["14", "Musa", "Muhammad", "JSS 1", "14", "40", "22",  "0", "PASSED"],
-                    ["15", "Umar", "Adamu", "JSS 1", "14", "19", "21",  "0", "PASSED"],
-                    ["16", "Abubakar", "Faisal", "JSS 1", "13", "18", "30", "36", "0", "PASSED"],
-                    ["17", "Muhammad", "Adam", "JSS 1", "12", "26", "25", "42", "0", "PASSED"],
-                    ["18", "Muhammad", "Auwal Bello", "JSS 1", "-", "17", "26", "34", "77", "PASSED"],
-                    ["19", "Abubakar", "Babaji Haruna", "JSS 1", "-", "25", "20", "31", "76", "PASSED"],
-                    ["20", "Kassim", "Hafsat", "JSS 1", "-", "17", "28", "26", "71", "PASSED"],
-                    ["21", "Abdullahi", "Abdullahi Yusuf", "JSS 1", "-", "15", "18", "20", "53", "FAILED"],
-                    ["22", "Yusuf", "Kabir", "JSS 1", "-", "21", "30", "32", "83", "PASSED"],
-                    ["23", "Suleiman", "Ummulkulthum", "JSS 1", "-", "14", "19", "17", "50", "FAILED"],
-                    ["24", "Bunu Alibe", "Aisha", "JSS 1", "-", "17", "25", "22", "64", "PASSED"],
-                    ["25", "Abubakar", "Maryam", "JSS 1", "-", "14", "36", "30", "80", "PASSED"],
-                    [26, "Saeed", "Muhammad Alamin", "JSS 1", "", "21", "40", "50", "", ""],
-                    [27, "Umar", "Aisha A.", "JSS 1", "", "27", "47", "12", "", ""],
-                    [28, "Abdul", "Muhammad Al-amin", "JSS 1", "", "17", "18", "15", "", ""],
-                    [29, "Jibril", "Abdulrahman Ahmad", "JSS 1", "", "21", "26", "31", "", ""],
-                    [30, "Muhammad", "Nana Firdausi", "JSS 3", "", "32", "39", "38", "", ""],
-                    [31, "Sani", "Fatima Isah", "JSS 1", "", "27", "37", "33", "", ""],
-                    [32, "Sani", "Muhammad isah", "JSS 1", "", "21", "26", "33", "", ""],
-                    [33, "Sani", "Muhammad Mansir", "JSS 1", "", "11", "26", "23", "", ""],
-                    [34, "Abubakar", "Hafsat Yakub", "JSS 1", "", "24", "26", "19", "", ""],
-                    [35, "Abubakar", "Fayyad Yakub", "JSS 2", "", "22", "30", "11", "", ""],
-                    [36, "Mu'azu", "Nasir A.", "JSS 1", "", "9", "15", "32", "", ""],
-                    [37, "Ibrahim", "Fadila Sani.", "JSS 3", "", "18", "30", "33", "", ""],
-                    [38, "Umar", "Sadik S.", "JSS 1", "", "13", "9", "10", "", ""],
-                    [39, "Abba", "Aisha Yahaya", "JSS 1", "", "15", "20", "27", "", ""],
-                    [40, "Umar", "Anisah Bamange", "JSS 1", "", "20", "29", "35", "", ""],
-                    [41, "Abdullahi", "Zainab", "JSS 3", "", "14", "27", "36", "", ""],
-                    [42, "Mustapha", "Musa Basri", "JSS 1", "", "17", "11", "16", "", ""],
-                    [43, "Abdulhameed", "Farhan Zuberu", "JSS 1", "", "22", "29", "32", "", ""],
-                    [44, "Aminu", "Rahman", "JSS 1", "", "15", "18", "24", "", ""],
-                    [45, "Usman", "Aisha Chill", "JSS 2", "", "14", "15", "27", "", ""],
-                    [46, "Muhammad", "Aisha Auwal", "JSS 1", "", "23", "25", "35", "", ""],
-                    [47, "Abdullahi", "Ramlat Sanusi", "JSS 1", "", "20", "36", "39", "", ""]
-
+                    ["1", "Umar ", "Muhammad Modibo", "JSS 1", "", "20", "49", "36", "PASSED"],
+                    ["2", "Khadija", "Zayyad Adam", "JSS 1", "", "15", "33", "32", "PASSED"],
+                    ["3", "Maryam", "Aliyu Dodo", "JSS 1", "", "13", "41", "35", "PASSED"],
+                    ["4", "Ridwan", "Mustapha Sali", "JSS 1", "", "29", "40", "45", "PASSED"],
+                    ["5", "Hauwa ", "Abdullahi Aliyu", "JSS 1", "", "21", "46", "40", "PASSED"],
+                    ["6", "Zinatu", " Muhammad Sani", "JSS 2", "", "16", "34", "18", "PASSED"],
+                    ["7", "Abdurrahman ", "Mamman Isah", "JSS 1", "", "22", "51", "41", "PASSED"],
+                    ["8", "UmmulAiman", "Muhammad Diko", "JSS 1", "", "31", "43", "37", "PASSED"],
+                    ["9", "Hussain", "Shamsudeen", "JSS 1", "", "23", "36", "25", "PASSED"],
+                    ["10", "Hafsat", "Abubakar Yakubu", "JSS 1", "", "31", "49", "46", "PASSED"],
+                    ["11", "Aliyu", "Muhammad Aliyu", "JSS 1", "", "15", "36", "23", "PASSED"],
+                    ["12", "Raihana", "Muhammad Nuruddeen", "JSS 1", "", "30", "44", "40", "PASSED"],
+                    ["13", "Sani", "Aminu Yusuf", "JSS 1", "", "06", "41", "16", "FAILED"],
+                    ["14", "Nafisa", "Murtala", "JSS 1", "", "18", "40", "43", "PASSED"],
+                    ["15", "Mustapha", "Tahir Saeed", "JSS 1", "", "12", "37", "25", "PASSED"],
+                    ["16", "Aisha", "Aliyu", "JSS 1", "", "28", "39", "45", "PASSED"],
+                    ["17", "Muhammad", " Al-amin Abdul Isah", "JSS 1", "", "19", "39", "39", "PASSED"],
+                    ["18", "Hauwa", "Usman Sali", "JSS 1", "", "25", "41", "37", "PASSED"],
+                    ["19", "Rukayya", "Sani", "JSS 1", "", "21", "40", "28", "PASSED"],
+                    ["20", "Aisha", "Aliyu", "JSS 1", "", "28", "39", "45", "FAILED"],
+                    ["21", "Ibrahim", "Abdulkadir", "JSS 1", "", "23", "34", "32", "PASSED"],
+                    ["22", "Fadila", "Abdullahi", "JSS 1", "", "12", "35", "22", "FAILED"],
+                    ["23", "Abubakar", "Muhammad", "JSS 1", "", "16", "20", "14", "FAILED"],
+                    ["24", "Hassan", "Shamsudeen", "JSS 1", "", "16", "36", "21", "FAILED"],
+                    ["25", "Aisha", " Muhammad Muktar", "JSS 1", "", "22", "44", "49", "PASSED"],
+                    ["26", "Zainab", "Rilwan", "JSS 1", "", "15", "21", "25", "FAILED"],
+                    ["27", "Amina", "Abdulkadir", "JSS 1", "", "11", "38", "28", "PASSED"],
+                    ["28", "Idris", "Ibrahim Idris", "JSS 1", "", "22", "35", "18", "PASSED"],
+                    ["29", "Saudat", "Imaran Kolo", "JSS 1", "", "17", "41", "37", "PASSED"],
+                    ["30", "Ahmad", "Abdullahi Saleh", "JSS 1", "", "25", "45", "43", "PASSED"],
+                    ["31", "Zainab", "Muhammad Mustapha", "JSS 1", "", "12", "37", "32", "PASSED"],
+                    ["32", "Muhammad", "Usman", "JSS 1", "", "23", "38", "34", "PASSED"],
+                    ["33", "Ummulkulthum", "Suleiman", "JSS 1", "", "17", "30", "24", "PASSED"],
+                    ["34", "Muhammad", "Zakari Umar", "JSS 1", "", "17", "33", "40", "PASSED"],
+                    ["35", "Mohammed", "Zarah Umar", "SS 2", "", "18", "47", "26", "PASSED"],
+                    ["36", "Ahmad", "Fatima Z.", "JSS 1", "", "13", "43", "18", "PASSED"],
+                    ["37", "Zainab", "M. Yunus", "SS 2", "", "14", "39", "22", "PASSED"],
+                    ["38", "Rukayya", "Aminu", "SS 2", "", "37", "42", "46", "PASSED"],
+                    ["39", "Musa", "Muhammad", "JSS 1", "", "14", "40", "22", "PASSED"],
+                    ["40", "Umar", "Adamu", "JSS 1", "", "14", "19", "21", "PASSED"]
                 ]
+            };
 
+            var passMarks = {
+                table1: 80,
+                table2: 80
+            };
+
+            var updatePassMarkDisplay = function (passMark) {
+                $('#passMarkValue').text(passMark);
+            };
+
+            function updateTable(data, passMark) {
+                var tableBody = $('#tableBody');
+                table.clear();
+                // Filter data for S.No. 1 to 40
+                var filteredData = data.filter(function (row) {
+                    var sno = parseInt(row[0]);
+                    return sno >= 1 && sno <= 40;
+                });
+                filteredData.forEach(function (row) {
+                    var maths = parseInt(row[5]);
+                    var englishLang = parseInt(row[6]);
+                    var generalKnowledge = parseInt(row[7]);
+                    var total = maths + englishLang + generalKnowledge;
+                    var status = total >= passMark ? "PASSED" : "FAILED";
+                    var statusClass = status === "PASSED" ? "pass" : "fail";
+                    table.row.add([
+                        row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], total, `<span class="${statusClass}">${status}</span>`
+                    ]).draw(false);
+                });
+            }
+
+            $('#tableSelector').on('change', function () {
+                var selectedTable = $(this).val();
+                updatePassMarkDisplay(passMarks[selectedTable]);
+                updateTable(tableData[selectedTable], passMarks[selectedTable]);
+            });
+
+            // Initially load the filtered table2
+            updatePassMarkDisplay(passMarks.table2);
+            updateTable(tableData.table2, passMarks.table2);
+        });
+    </script>
+
+</body>
+
+</html>
                 // Add more tables as needed
             };
 
